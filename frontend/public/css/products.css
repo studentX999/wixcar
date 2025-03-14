@@ -1,0 +1,179 @@
+/* Reset và căn chỉnh cơ bản */
+body {
+    font-family: 'Roboto', sans-serif; /* Đồng bộ font với main.php */
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Navbar Adjustments */
+.navbar {
+    padding: 0.25rem 0.5rem; /* Đồng bộ padding với main.php */
+    background-color: #6c757d; /* Màu navbar-dark, đồng bộ với main.php */
+}
+
+.navbar-brand img {
+    width: 100px !important; /* Đồng bộ kích thước logo với main.php */
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 100px !important;
+    object-fit: contain !important;
+    display: block !important;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Đồng bộ hiệu ứng hover */
+}
+
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Đồng bộ với main.php, logo và menu sát nhau bên trái */
+    padding: 0;
+    gap: 1rem; /* Khoảng cách nhỏ giữa logo và menu */
+}
+
+.navbar-collapse {
+    flex-grow: 0; /* Ngăn navbar-collapse mở rộng quá mức */
+}
+
+.navbar-nav {
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 1rem; /* Khoảng cách giữa các mục menu */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem; /* Đồng bộ kích thước chữ */
+    font-weight: 500;
+    padding: 0.25rem 0.75rem; /* Đồng bộ padding */
+    transition: color 0.3s ease;
+    color: #fff !important; /* Đảm bảo text-light hoạt động */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Container và các phần khác */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    margin-top: 100px; /* Đồng bộ với style inline trong products.php */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer Adjustments (đồng bộ với main.php) */
+footer {
+    background-color: #343a40; /* Màu nền giống main.php */
+    color: #fff;
+    padding: 1rem 0; /* Đồng bộ py-4 trong main.php */
+    margin-top: 2rem; /* Đồng bộ mt-5 trong main.php */
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    margin-bottom: 0; /* Đồng bộ mb-0 */
+}
+
+footer .mt-2 {
+    margin-top: 0.5rem; /* Đồng bộ mt-2 */
+}
+
+footer a {
+    color: #fff;
+    font-size: 1.5rem; /* Đồng bộ kích thước icon */
+    transition: color 0.3s ease;
+    margin: 0 0.5rem; /* Khoảng cách giữa các icon */
+}
+
+footer a:hover {
+    color: #007bff !important; /* Đồng bộ hiệu ứng hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.25rem 0.25rem;
+    }
+
+    .navbar-brand img {
+        width: 80px !important;
+        max-height: 80px !important;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 0.5rem;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    footer .container {
+        padding: 0 1rem; /* Điều chỉnh padding cho màn hình nhỏ */
+    }
+
+    footer a {
+        font-size: 1.2rem; /* Giảm kích thước icon trên màn hình nhỏ */
+        margin: 0 0.3rem;
+    }
+}
+
+/* Các phần khác giữ nguyên */
+.brand {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.brand:hover {
+    background: #ddd;
+}

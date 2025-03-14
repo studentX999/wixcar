@@ -1,4 +1,199 @@
+/* Reset và căn chỉnh cơ bản */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+.hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .overlay {
+    z-index: 1;
+}
+
+.hero-section .hero-content {
+    z-index: 2;
+}
+
+.hero-section h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Section Introduction */
+.section-title {
+    color: #343a40;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.img-fluid {
+    transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+    transform: scale(1.02);
+}
+
+.btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+    border-color: #6c757d;
+}
+
+/* Navbar Adjustments */
+.navbar {
+    padding: 0.25rem 0.5rem; /* Giảm padding để thu hẹp navbar */
+}
+
+.navbar-brand img {
+    width: 100px !important; /* Tăng độ ưu tiên */
+    height: auto !important; /* Giữ tỷ lệ */
+    max-width: 100% !important; /* Giới hạn tối đa */
+    max-height: 100px !important; /* Giới hạn chiều cao */
+    object-fit: contain !important; /* Giữ tỷ lệ, không cắt xén */
+    display: block !important; /* Loại bỏ khoảng cách thừa */
+    transition: transform 0.3s ease; /* Hiệu ứng hover */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Phóng to khi hover */
+}
+
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Logo và menu sát nhau bên trái */
+    padding: 0; /* Loại bỏ padding thừa */
+    gap: 1rem; /* Khoảng cách nhỏ giữa logo và menu */
+}
+
+.navbar-collapse {
+    flex-grow: 0; /* Ngăn navbar-collapse mở rộng quá mức */
+}
+
+.navbar-nav {
+    margin-left: 0; /* Loại bỏ margin tự động của Bootstrap */
+    padding-left: 0; /* Loại bỏ padding thừa */
+    display: flex; /* Sử dụng flex để căn chỉnh menu */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 1rem; /* Khoảng cách giữa các mục menu */
+}
+
 .navbar-nav .nav-link {
-    font-size: 1.5rem; 
-    margin: 20px;
+    font-size: 1rem; /* Giảm kích thước chữ để gọn hơn */
+    font-weight: 500;
+    padding: 0.25rem 0.75rem; /* Giảm padding trong các mục */
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* News Cards */
+.card {
+    border: none;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.news-img {
+    height: 200px; /* Chiều cao cố định cho tất cả hình ảnh */
+    object-fit: cover; /* Giữ tỷ lệ và cắt bớt nếu cần */
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.card-footer .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.card-footer .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Footer */
+footer a {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bff !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 300px;
+    }
+
+    .hero-section .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .hero-content .lead {
+        font-size: 1rem;
+    }
+
+    .news-img {
+        height: 150px; /* Giảm chiều cao trên màn hình nhỏ */
+    }
+
+    .navbar {
+        padding: 0.25rem 0.25rem;
+    }
+
+    .navbar-brand img {
+        width: 80px; /* Giảm kích thước logo trên màn hình nhỏ */
+        max-height: 80px; /* Giới hạn chiều cao trên màn hình nhỏ */
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem; /* Giảm kích thước chữ trên màn hình nhỏ */
+        padding: 0.2rem 0.5rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin-right: 0.5rem; /* Giảm khoảng cách giữa các mục trên màn hình nhỏ */
+    }
 }
