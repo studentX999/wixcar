@@ -17,6 +17,7 @@ class ProductController {
         $this->cars = [
             new Car(1, 1, "Aston Martin DB11", "../frontend/assets/images/aston_martin_db11.jpg", 250000),
             new Car(2, 1, "Aston Martin Valkyrie", "../frontend/assets/images/aston_martin_valkyrie.jpg", 3200000),
+            new Car(3, 1, "Aston Martin DB10", "../frontend/assets/images/aston_martin_db10.jpg", 500000),
             new Car(3, 2, "Vinfast VF3", "../frontend/assets/images/vinfast_vf3.jpg", 20000),
             new Car(4, 2, "Vinfast Lux SA2.0", "../frontend/assets/images/vinfast_lux_sa2.jpg", 60000),
             new Car(5, 3, "Pagani Huayra", "../frontend/assets/images/pagani_huayra.jpg", 2800000)

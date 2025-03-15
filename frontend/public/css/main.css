@@ -66,56 +66,37 @@ body {
 
 /* Navbar Adjustments */
 .navbar {
-    padding: 0.25rem 0.5rem; /* Giảm padding để thu hẹp navbar */
+    padding: 0.5rem 1rem; /* Tăng padding để thoáng hơn */
 }
 
+/* Logo */
 .navbar-brand img {
-    width: 100px !important; /* Tăng độ ưu tiên */
-    height: auto !important; /* Giữ tỷ lệ */
-    max-width: 100% !important; /* Giới hạn tối đa */
-    max-height: 100px !important; /* Giới hạn chiều cao */
-    object-fit: contain !important; /* Giữ tỷ lệ, không cắt xén */
-    display: block !important; /* Loại bỏ khoảng cách thừa */
-    transition: transform 0.3s ease; /* Hiệu ứng hover */
+    width: 100px; /* Loại bỏ !important để dễ override */
+    height: auto;
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
 .navbar-brand img:hover {
-    transform: scale(1.1); /* Phóng to khi hover */
+    transform: scale(1.1);
 }
 
-.navbar .container-fluid {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Logo và menu sát nhau bên trái */
-    padding: 0; /* Loại bỏ padding thừa */
-    gap: 1rem; /* Khoảng cách nhỏ giữa logo và menu */
+.navbar-nav img:hover {
+    transform: scale(1.1);
 }
 
-.navbar-collapse {
-    flex-grow: 0; /* Ngăn navbar-collapse mở rộng quá mức */
+/* Icon Cart */
+.navbar-nav.ms-auto {
+    margin-left: auto !important;
 }
 
-.navbar-nav {
-    margin-left: 0; /* Loại bỏ margin tự động của Bootstrap */
-    padding-left: 0; /* Loại bỏ padding thừa */
-    display: flex; /* Sử dụng flex để căn chỉnh menu */
-}
-
-.navbar-nav .nav-item {
-    margin-right: 1rem; /* Khoảng cách giữa các mục menu */
-}
-
-.navbar-nav .nav-link {
-    font-size: 1rem; /* Giảm kích thước chữ để gọn hơn */
-    font-weight: 500;
-    padding: 0.25rem 0.75rem; /* Giảm padding trong các mục */
+.navbar-nav .nav-link .fa-shopping-cart {
+    font-size: 1.5rem; /* Tăng kích thước icon cart */
+    color: #fff; /* Màu trắng */
     transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #fff !important;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
 }
 
 /* News Cards */
@@ -126,7 +107,7 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(19, 59, 96, 0.648);
     transform: translateY(-5px);
 }
 
@@ -155,6 +136,7 @@ body {
 footer a {
     font-size: 1.5rem;
     transition: color 0.3s ease;
+    background-color: #5b646c;
 }
 
 footer a:hover {

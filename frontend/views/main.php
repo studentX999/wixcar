@@ -22,20 +22,33 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
+            <!-- Logo -->
             <a class="navbar-brand" href="?page=main">
-                <img src="../frontend/assets/images/webicon.png" alt="Wixcar Logo">
+                <img src="../frontend/assets/images/webicon.png" alt="Wixcar Logo" style="height: 40px;">
             </a>
+            <!-- Button toggle cho mobile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link text-light" href="?page=products">Products</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="?page=main">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="?page=main">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link text-light" href="?page=main">Blog</a></li>
+            <!-- Menu chính -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="?page=products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="?page=about">About</a>
+                    </li>
+                </ul>
+                <!-- Icon Cart -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="?page=cart">
+                            <i class="fas fa-shopping-cart" style="font-size: 1.5rem;"><img src="../frontend/assets/images/cart_icon.png"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -60,7 +73,7 @@
             <div class="col-md-6">
                 <h2 class="text-secondary">Our Promise</h2>
                 <p class="lead">We hold 100% of the market share. If you find a beautiful car within 100km that isn’t sold by us, we’ll reward you with 30 billion VND!</p>
-                <a href="?page=main" class="btn btn-outline-secondary">Learn More</a>
+                <a href="?page=about" class="btn btn-outline-secondary">Learn More</a>
             </div>
         </div>
     </section>
@@ -118,9 +131,9 @@
         <div class="container">
             <p class="mb-0">© Copyright © Wixcar 2025. All rights reserved.</p>
             <div class="mt-2">
-                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"><img src="../frontend/assets/images/facebook_icon.png"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"><img src="../frontend/assets/images/X_icon.png"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-instagram"><img src="../frontend/assets/images/instagram_icon.png"></i></a>
             </div>
         </div>
     </footer>

@@ -7,9 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
-     <!-- Điều chỉnh đường dẫn nếu cần -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2Lw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title><?php echo $data['title']; ?></title>
     <link rel="stylesheet" href="../frontend/public/css/main.css">
-    <title>Wixcar - Cars</title>
+    <title>Wixcar - About</title>
 </head>
 <body>
     <!-- Navbar -->
@@ -27,10 +28,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="?page=products">Products</a>
+                        <a class="nav-link text-black" href="?page=products">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="?page=about">About</a>
+                        <a class="nav-link text-black" href="?page=about">About</a>
                     </li>
                 </ul>
                 <!-- Icon Cart -->
@@ -45,24 +46,66 @@
         </div>
     </nav>
 
+    <!-- About Section -->
     <div class="container" style="margin-top:100px">
-        <h1 class="text-center mb-4">Cars</h1>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <?php foreach ($filteredCars as $car): ?>
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="<?php echo $car->getImage(); ?>" class="card-img-top" alt="<?php echo $car->getName(); ?>" style="height: 200px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $car->getName(); ?></h5>
-                            <p class="card-text">Price: $<?php echo number_format($car->getPrice(), 2); ?></p>
-                        </div>
-                        <div class="card-footer">
-                            <button class="btn btn-primary">View Details</button>
-                        </div>
+        <h1 class="text-center mb-4">About Wixcar</h1>
+
+        <!-- Introduction -->
+        <section class="mb-5">
+            <h2 class="text-center mb-3">Who We Are</h2>
+            <p class="text-center"><?php echo $data['intro']; ?></p>
+        </section>
+
+        <!-- Mission and Vision -->
+        <section class="row mb-5">
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Our Mission</h3>
+                        <p class="card-text"><?php echo $data['mission']; ?></p>
                     </div>
                 </div>
-            <?php endforeach; ?>
-        </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Our Vision</h3>
+                        <p class="card-text"><?php echo $data['vision']; ?></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="mb-5">
+            <h2 class="text-center mb-3">Meet Our Team</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <?php foreach ($data['team'] as $member): ?>
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="<?php echo $member['image']; ?>" class="card-img-top" alt="<?php echo $member['name']; ?>" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $member['name']; ?></h5>
+                                <p class="card-text"><?php echo $member['role']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </section>
+
+        <!-- Contact Info -->
+        <section class="mb-5">
+            <h2 class="text-center mb-3">Get in Touch</h2>
+            <p class="text-center">
+                Have questions or want to learn more about our services? Reach out to us!
+            </p>
+            <div class="text-center">
+                <p><strong>Email:</strong> <?php echo $data['contact']['email']; ?></p>
+                <p><strong>Phone:</strong> <?php echo $data['contact']['phone']; ?></p>
+                <p><strong>Address:</strong> <?php echo $data['contact']['address']; ?></p>
+            </div>
+        </section>
     </div>
 
     <!-- Footer -->
